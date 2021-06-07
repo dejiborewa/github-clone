@@ -8,7 +8,11 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   mode: "development",
-  plugins: [new Dotenv()],
+  plugins: [
+    new Dotenv({
+      systemvars: true,
+    }),
+  ],
   resolve: {
     fallback: {
       path: require.resolve("path-browserify"),
@@ -17,4 +21,3 @@ module.exports = {
     },
   },
 };
-
