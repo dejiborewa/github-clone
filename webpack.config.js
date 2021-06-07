@@ -12,7 +12,7 @@ module.exports = {
   resolve: {
     fallback: {
       path: require.resolve("path-browserify"),
-      fs: false,
+      fs: require.resolve("browserify-fs"),
       os: false,
     },
   },
