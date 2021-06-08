@@ -53,18 +53,43 @@ button {
 }
 
 .personal-info {
-  margin: 0.4em 0 2em 0;
-  align-items: center;
-}
-
-.personal-info div {
-  margin: 5px;
-}
-
-.personal-info {
   display: flex;
+  align-items: center;
   padding: 0 1em;
   color: var(--color-darkgrey);
+  margin: 1em 0 2em 0;
+}
+
+#avatar {
+  width: 15%;
+  margin: 0;
+}
+
+#avatar img {
+  width: 100%;
+  border: 1px solid var(--color-borders);
+  border-radius: inherit;
+  border-radius: 50%;
+}
+
+#smiley-container {
+  display: none;
+}
+
+.names {
+  width: 80%;
+  margin-left: 5%;
+}
+
+#username {
+  color: var(--color-lightgrey);
+  font-size: 20px !important;
+}
+
+.full-name h1 {
+  font-weight: 600;
+  margin: 0;
+  font-size: 26px !important;
 }
 
 .status-container {
@@ -117,7 +142,7 @@ button {
 }
 
 .people {
-  margin-bottom: 2em;
+  margin: 0.7em 0 2em 0;
   padding: 0 1em;
 }
 
@@ -143,35 +168,6 @@ button {
 #starredRepo {
   font-weight: 600 !important;
   color: var(--color-darkgrey);
-}
-
-#avatar {
-  width: 20%;
-  border-radius: 50%;
-  border: 1px solid var(--color-borders);
-  margin: 0;
-}
-
-#avatar img {
-  width: 100%;
-  border-radius: inherit;
-}
-
-#smiley-container {
-  display: none;
-}
-
-.names {
-  width: 80%;
-}
-
-#username {
-  color: var(--color-lightgrey);
-}
-
-.full-name h1 {
-  font-weight: 600;
-  margin: 0;
 }
 
 .horizontal-scrollbar {
@@ -304,7 +300,6 @@ summary > * {
   font-size: 20px;
   text-decoration: none;
   margin-bottom: 4px;
-  
 }
 
 .repo-name:hover {
@@ -352,6 +347,7 @@ summary > * {
 
 .footer {
   margin-top: 2em;
+  padding-top: 2em;
   border-top: 1px solid var(--color-borders);
 }
 
@@ -493,8 +489,13 @@ summary > * {
     border-radius: 50%;
   }
 
+  .names {
+    width: auto;
+  }
+
   .personal-info {
     display: block;
+    padding: 0;
   }
 
   .search-type-language {

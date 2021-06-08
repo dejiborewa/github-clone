@@ -7,6 +7,25 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: ["postcss-preset-env"],
+              },
+            },
+          },
+        ],
+      },
+    ],
+  },
   mode: "development",
   plugins: [new Dotenv()],
   resolve: {
