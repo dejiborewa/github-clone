@@ -6,16 +6,21 @@
   "dependencies": {
     "browserify-fs": "^1.0.0",
     "dotenv": "^10.0.0",
+    "dotenv-webpack": "^7.0.3",
+    "http-browserify": "^1.7.0",
+    "node-static": "^0.7.11",
+    "path-browserify": "^1.0.1",
     "postcss": "^8.3.0",
     "postcss-loader": "^5.3.0",
+    "url": "^0.11.0",
+    "util": "^0.12.4",
     "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.0",
-    "dotenv-webpack": "^7.0.3",
-    "path-browserify": "^1.0.1"
+    "webpack-cli": "^4.7.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "start": "node public/js/server.js"
   },
   "keywords": [],
   "author": "",

@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>My Github App</title>
-    <link href="./src/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="app.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/github.svg" />
+    <link rel="icon" href="github.svg" />
   </head>
   <body>
     <header class="header">
@@ -85,6 +85,7 @@
                 ><input type="text" placeholder="Search or jump to..."
               /></label>
               <img
+                loading="lazy"
                 src="https://github.githubassets.com/images/search-key-slash.svg"
                 alt="search-key"
               />
@@ -156,7 +157,7 @@
       </div>
     </header>
 
-    <main>
+    <main class='main-index'>
       <section>
         <div class="section-left">
           <div class="personal-info">
@@ -462,6 +463,6 @@
         </ul>
       </div>
     </footer>
-    <script src="./dist/main.js"></script>
+    <script src="../dist/profile.bundle.js"></script>
   </body>
 </html>

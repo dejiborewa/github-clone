@@ -29,6 +29,46 @@ button {
   cursor: pointer;
 }
 
+/* styles for entry.html & error.html */
+
+.main-container {
+  position: relative;
+  min-height: 70vh;
+}
+
+.main-container form,
+.main-container div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  display: block;
+}
+
+#username-main {
+  padding: 0.5em;
+}
+
+form > input {
+  margin-bottom: 0.5em;
+  width: 100%;
+}
+
+form > button {
+  width: 100%;
+}
+
+form > button:hover,
+button:active {
+  color: white;
+  background-color: var(--color-darkgrey);
+}
+
+/* end of styles for entry.html & error.html */
+
 .header-container-small {
   padding: 1em;
   background-color: var(--color-darkgrey);
@@ -380,6 +420,29 @@ summary > * {
 }
 
 @media only screen and (min-width: 768px) {
+  /* styles for entry.html */
+
+  form {
+    display: flex;
+    align-items: center;
+  }
+
+  form > input {
+    margin-bottom: 0em;
+  }
+
+  form > button {
+    margin-left: 1em;
+  }
+
+  form > button:hover,
+  button:active {
+    color: white;
+    background-color: var(--color-darkgrey);
+  }
+
+  /* end of styles for entry.html*/
+
   section {
     display: flex;
     margin: 2em 0.3em 0 0.3em;
@@ -567,7 +630,7 @@ summary > * {
     margin-right: 8em;
   }
 
-  main {
+  .main-index {
     margin: 0 8em;
   }
 

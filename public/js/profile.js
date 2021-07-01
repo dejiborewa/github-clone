@@ -1,9 +1,8 @@
-const access_token = process.env.API_KEY;
-
+let username = localStorage.getItem("username");
 
 const query = {
   query: `{
-    user(login: "dejiborewa") {
+    user(login: "${username}") {
       id
       name
       bio
@@ -51,7 +50,7 @@ const options = {
   headers: {
     "Content-type": "application/json",
     Accept: "application/json",
-    Authorization: `Bearer ${access_token}`,
+    Authorization: `Bearer ${process.env.API_KEY}`,
   },
   body: queryJSON,
 };
@@ -62,6 +61,7 @@ async function fetchData(url, options) {
   if (response.status === 200) {
     const result = await response.json();
     const img = document.createElement("img");
+
     const img_small = document.createElement("img");
     const arrayOfRepos = result.data.user.repositories.nodes;
     document.getElementById("my-name").textContent = result.data.user.name;
@@ -77,6 +77,7 @@ async function fetchData(url, options) {
       result.data.user.repositories.totalCount;
     img.src = result.data.user.avatarUrl;
     img_small.src = result.data.user.avatarUrl;
+    img.loading = "eager";
     img.alt = "Change your avatar";
     document.getElementById("avatar").appendChild(img);
     document.getElementById("avatar-small").appendChild(img_small);
