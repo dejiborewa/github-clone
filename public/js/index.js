@@ -29,9 +29,6 @@ document.getElementById("submit-btn").addEventListener("submit", (event) => {
 
     if (response.status === 200) {
       const result = await response.json();
-      /*if (result.data.user.id) {
-        window.location.href = "./profile.html";
-      }*/
 
       if (result.data.user === null) {
         window.location.href = "./error.html";
