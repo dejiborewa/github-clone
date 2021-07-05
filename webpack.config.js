@@ -10,26 +10,6 @@ module.exports = {
     path: __dirname + "/public/dist",
   },
   mode: "production",
-  module: {
-    rules: [
-      {
-        test: /\.css$/i,
-        use: [
-          "style-loader",
-          "css-loader",
-          {
-            loader: "postcss-loader",
-            options: {
-              postcssOptions: {
-                plugins: ["postcss-preset-env"],
-              },
-            },
-          },
-        ],
-      },
-    ],
-  },
-  mode: "development",
   plugins: [new Dotenv()],
   resolve: {
     fallback: {
